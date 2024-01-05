@@ -1,0 +1,9 @@
+.main-heading
+{
+    text-align: center;
+    font-size: 2rem;
+    color: red;
+    margin-top: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+}

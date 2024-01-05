@@ -1,0 +1,73 @@
+.form-container {
+    display: flex;
+    justify-content: flex-end; 
+    position: fixed;
+    top: 0;
+    padding-left: 650px;
+    width: 100% !important;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 10px solid blue;
+    width: 60%;
+    left: 50%;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.form-block
+{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+label
+{
+    margin-left: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.input-align {
+    display: flex;
+    justify-content: space-between;
+
+}
+input
+{
+    border:  1.5px solid blue;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+.form-heading
+{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+.button-containter
+{
+    text-align: end;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+.button-update, .button-cancel
+{
+    background-color: rgb(38, 38, 252);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.button-cancel
+{
+     margin-left:15px;
+}

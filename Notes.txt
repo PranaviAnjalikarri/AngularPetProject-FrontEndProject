@@ -1,0 +1,29 @@
+Services:
+In this 
+1.model-pop-up-service:
+pop up's kosam create chasanu ee file ni
+
+2.model-pop-up-edit-service:
+home page lo edit icon create chasam aa icon click chayaganey ee edit service pop up aneydhi click avuthadhi
+
+3.model-pop-up-del-service:
+home page lo delete icon create chasam aa icon click chayaganey ee delete service pop up aneydhi click avuthadhi
+
+4.employee-service.ts:
+Here, i have called all the backend api's.
+
+5.employee-event-service.ts:
+Here, click events ni initialize chasukunna
+
+Interface:
+employee.ts
+>here, i have created by properties in a employee.
+
+Assets:
+Images:
+Here i have create 2 images 
+1.edit icon
+2.delete icon
+
+endhuku create chasanu antey home page lo manam add chasina employee information get all employess tho kanipisthadhi akada edit delete chayadhaniki icons kavali.
+so andhukani create chasanu. 

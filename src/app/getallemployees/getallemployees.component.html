@@ -1,0 +1,70 @@
+<!-- <div>{{ employyes | json }}</div> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="information-container">
+    
+    <div class="add-button-div">
+      <button class="add-button" (click)="showModal()">Add</button>
+    </div>
+    <div class="heading">Employee List</div>
+    <br>
+    <table class="table-content">
+      <tr>
+        <td class="table-heading">Name</td>
+        <td class="table-heading">Gender</td>
+        <td class="table-heading">Age</td>
+        <td class="table-heading">DOB</td>
+        <td class="table-heading">Email</td>
+        <td class="table-heading">Phone</td>
+        <td class="table-action"></td>
+      </tr>
+    </table>
+
+
+    <div *ngFor="let employee of employees" class="table-content">
+      <table>
+        <!--tr>
+          <td> {{ employee.id }}</td>
+        </tr-->
+        <tr>
+          <td ng-if="$odd" style="background-color:#bcbebe"> {{ employee.name }}</td>
+        </tr>
+        <tr>
+          <td ng-if="$odd" style="background-color:#bcbebe"> {{ employee.gender }}</td>
+        </tr>
+        <tr>
+          <td ng-if="$odd" style="background-color:#bcbebe"> {{ employee.age }}</td>
+        </tr>
+        <tr>
+          <td ng-if="$odd" style="background-color:#bcbebe"> {{ employee.dob }}</td>
+        </tr>
+        <tr>
+          <td ng-if="$odd" style="background-color:#bcbebe"> {{ employee.email }}</td>
+        </tr>
+        <tr>
+          <td ng-if="$odd" style="background-color:#bcbebe"> {{ employee.phonenumber }}</td>
+        </tr>
+        <tr ng-if="$odd" style="background-color:#bcbebe">
+          <img class="edit-icon" src="../../assets/icons/edit.svg"  (click)="showEditModal(employee)" alt="edit">
+        </tr>
+        <tr ng-if="$odd" style="background-color:#bcbebe">
+          <img src="../../assets/icons/delete.png" alt="delete" (click)="showDelModal(employee)" class="cross-icon">
+        </tr>
+      </table>
+    </div>
+      
+    <app-editemployees *ngIf="modalEditService.isEditModalVisible"></app-editemployees>
+    <app-addemployees *ngIf="modalService.isModalVisible"></app-addemployees>
+    <app-deleteemployees *ngIf="modalDelService.isDelModalVisible"></app-deleteemployees>
+  </div>
+</body>
+
+</html>

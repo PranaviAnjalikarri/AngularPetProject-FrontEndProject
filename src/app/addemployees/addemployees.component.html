@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <form class="container" (click)="$event.stopPropagation()">
+            <h2 class="form-heading" >Add Employee Form</h2>
+            <div [formGroup]="newEmployeeForm">
+                <!--div class="form-block">
+                    <div class="input-align">
+                        <label for="Id">ID</label>
+                        <input type="number" id="Id" name="Id" formControlName="Id" placeholder="Your Id..">
+                    </div>
+                    <div class="validation-msg" *ngIf="newEmployeeForm.get('Id')?.hasError('required') && newEmployeeForm.get('id')?.touched">
+                        *ID is required
+                    </div>
+
+                </div-->
+                <div class="form-block">
+                    <div class="input-align">
+                        <label for="Name">Name</label>
+                        <input type="text" id="Name" name="Name" formControlName="Name" placeholder="Your name..">
+                    </div>
+                    <div class="validation-msg" *ngIf="newEmployeeForm.get('Name')?.hasError('required') && newEmployeeForm.get('Name')?.touched">
+                        *Name is required
+                    </div>
+                </div>
+
+                <div class="form-block">
+                    <div class="input-align">
+                        <label for="Age">Age</label>
+                        <input type="number" id="Age" name="Age" formControlName="Age" placeholder="Your Age..">
+                    </div>
+                    <div class="validation-msg" *ngIf="newEmployeeForm.get('Age')?.hasError('required') && newEmployeeForm.get('Age')?.touched">
+                        *Age is required
+                    </div>
+
+                    <div class="validation-msg" *ngIf="newEmployeeForm.get('Age')?.hasError('pattern') && newEmployeeForm.get('Age')?.touched">
+                        Age should be number
+                    </div>
+                </div>
+
+                <div class="form-block">
+                    <div class="input-align">
+                        <div>
+                            <label for="Gender">Gender</label>
+                        </div>
+                        <div>
+                            <div class="gender">
+                                <input type="radio" id="male" name="Gender" value="Male"><label for="male">Male</label>
+                                  <input type="radio" id="female" name="Gender" value="Female"><label for="female">Female</label>
+                            </div>
+                            <div class="validation-msg"
+                                *ngIf="newEmployeeForm.get('Gender')?.hasError('required') && newEmployeeForm.get('Gender')?.touched">
+                                *Gender is required
+                            </div>
+                        </div>
+                    </div>
+             </div>
+
+                <div class="form-block">
+                    <div class="input-align">
+                       <label for="DOB">DOB</label>
+                       <input type="date" id="DOB" name="DOB" formControlName="DOB" placeholder="Your Date Of Birth.."> 
+                    </div>
+                    <div class="validation-msg" *ngIf="newEmployeeForm.get('DOB')?.hasError('required') && newEmployeeForm.get('DOB')?.touched">
+                        *DoB  is required
+                    </div>
+                    <div class="validation-msg" *ngIf="newEmployeeForm.get('DOB')?.hasError('pattern') && newEmployeeForm.get('DOB')?.touched">
+                        *Please give the DOB is in right format
+                    </div>    
+                </div>
+                <div class="form-block">
+                    <div class="input-align">
+                        <label for="PhoneNumber">PhoneNumber</label>
+                        <input type="text" id="PhoneNumber" name="PhoneNumber" formControlName="PhoneNumber"
+                            placeholder="Your PhoneNumber..">
+                    </div>
+                    <div class="validation-msg" *ngIf="newEmployeeForm.get('PhoneNumber')?.hasError('required') && newEmployeeForm.get('Phone')?.touched">
+                        *PhoneNumber is required
+                    </div>
+                    <div class="validation-msg" *ngIf="newEmployeeForm.get('PhoneNumber')?.hasError('pattern') && newEmployeeForm.get('Phone')?.touched">
+                        PhoneNumber should be 10 digits
+                    </div>
+                </div>
+                <div class="form-block">
+                    <div class="input-align">
+                        <label for="Email">Email</label>
+                        <input type="Email" id="Email" name="Email" formControlName="Email" placeholder="Your Email..">
+                    </div>
+                    <div class="validation-msg" *ngIf="newEmployeeForm.get('Email')?.hasError('required') && newEmployeeForm.get('Email')?.touched">
+                        *E-Mail Id is required
+                    </div>
+                </div>
+                <div *ngIf="errorMessage">
+                    <p class="errorMessage">{{errorMessage }}</p>
+                </div>
+                <div class="button-containter">
+                    <button type="submit" class="button-add" (click)="addEmployee()">Add </button>
+                    <button type="button" class="button-cancel" (click)="hideModal()">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+
+
+<!--div class="form-group" [class.has-error]="gender.invalid">
+    <label class="control-label">Gender</label>
+    <div class="form-control">
+      <label class="radio-inline">
+        <input type="radio" name="gender" required #gender="ngModel"
+               value="male" [(ngModel)]="employee.gender"> Male
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="gender" required #gender="ngModel"
+               value="female" [(ngModel)]="employee.gender"> Female
+      </label>
+    </div>
+    <span class="help-block" *ngIf="gender.invalid">
+      Gender is required
+    </span>
+  </div-->

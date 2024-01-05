@@ -1,0 +1,70 @@
+
+.information-container {
+  margin-top: 30px;    
+}
+
+.table-content {
+    display: flex;
+    border: 1px solid black;
+    margin-left: 150px;
+    width: 70%;  
+}
+
+.add-button-div {
+    text-align: right;
+    margin-bottom: 40px;
+    margin-right: 150px;
+}
+
+table {
+    display: flex;
+}
+
+td {
+    width: 350px;
+    border-right: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+.add-button {
+    background-color: rgb(106, 106, 244);
+    color: white;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0 35px;
+}
+
+.table-heading {
+    width: 166.6px; 
+    padding: 8px;
+    padding-right: 0px;
+    background-color: rgb(106, 106, 244);
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+   
+}
+
+.table-action
+{
+    width: 60px;
+    background-color: rgb(106, 106, 244);
+}
+
+.edit-icon {
+    width: 70px;
+    padding: 6px;
+}
+
+.cross-icon {
+   
+    width: 60px;
+    padding: 6px;
+}
+
+.heading{
+    font-weight: bold;
+    text-align: center;
+}
