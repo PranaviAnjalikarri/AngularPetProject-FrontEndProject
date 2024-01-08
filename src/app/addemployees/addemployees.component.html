@@ -56,7 +56,7 @@
                                 <input type="radio" id="male" name="Gender" formControlName="Gender" value="Male"><label for="male">Male</label>
                                   <input type="radio" id="female" name="Gender" formControlName="Gender" value="Female"><label
                                   for="female">Female</label>
-                              </div>
+                                </div>
                             <div class="validation-msg"
                                 *ngIf="newEmployeeForm.get('Gender')?.hasError('required') && newEmployeeForm.get('Gender')?.touched">
                                 *Gender is required
@@ -68,7 +68,7 @@
                 <div class="form-block">
                     <div class="input-align">
                        <label for="DOB">DOB</label>
-                       <input type="date" id="DOB" name="DOB" formControlName="DOB" placeholder="Your Date Of Birth.."> 
+                       <input type="date" style="width: 185px;" id="DOB" name="DOB" formControlName="DOB" placeholder="Your Date Of Birth.."> 
                     </div>
                     <div class="validation-msg" *ngIf="newEmployeeForm.get('DOB')?.hasError('required') && newEmployeeForm.get('DOB')?.touched">
                         *DoB  is required

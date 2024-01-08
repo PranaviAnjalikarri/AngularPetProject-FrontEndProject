@@ -20,6 +20,8 @@
     left: 50%;
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+    overflow: scroll;
 }
 
 .form-block {
@@ -36,6 +38,7 @@
     justify-content: space-between;
 
 }
+
 .gender{
     display: flex;
 }
@@ -52,7 +55,6 @@ input {
     text-align: center;
     margin-top: 5px;
     height: 40px;
-    margin-right: 10px;
     border-radius: 3px;
 }
 
@@ -102,3 +104,10 @@ input {
     font-size: 0.85rem;
 
 }
+.label1{
+    text-align: center;
+    margin-top: 5px;
+    height: 40px;
+    
+}
+
